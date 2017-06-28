@@ -1,6 +1,6 @@
-import { browser, element, by } from 'protractor';
+import { browser, by, element } from 'protractor';
 
-export class ComicsListPage {
+export class ComponentInteractionExamplesPage {
   navigateTo() {
     return browser.get('/');
   }

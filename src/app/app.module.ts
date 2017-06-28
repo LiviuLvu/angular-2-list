@@ -1,33 +1,49 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-
 
 import { AppComponent } from './app.component';
-import { ColorPickerComponent } from './color-picker/color-picker.component';
-import { HighlightDirective } from './highlight.directive';
-import { SizerComponent } from './sizer/sizer.component';
-import { CollapseOnClick } from './collapse-on-click.directive';
-import { ShowOneTrigger } from './show-one-trigger';
-import { ShowOneContainer } from './show-one-container';
-import { ShowOne } from './show-one';
+import { HeroChildComponent } from './hero-child.component';
+import { HeroParentComponent } from './hero-parent.component';
+import { NameParentComponent } from './name-parent.component';
+import { NameChildComponent } from './name-child.component';
+import { VersionParentComponent } from './version-parent.component';
+import { VersionChildComponent } from './version-child.component';
+import { VoteTakerComponent } from './votetaker.component';
+import { VoterComponent } from './voter.component';
+import { CountdownTimerComponent }  from './countdown-timer.component';
+import { CountdownParentComponent  }  from './countdown-parent.component';
+import { CountdownParentViewChildComponent  }  from './countdown-parent.component';
+import { MissionControlComponent  }  from './missioncontrol.component';
+import { AstronautComponent }  from './astronaut.component';
+import { MessageReceiver }  from './message-receiver.component';
+import { MessageSender }  from './message-sender.component';
+import { MessageService }  from './message.service';
+
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColorPickerComponent,
-    HighlightDirective,
-    CollapseOnClick,
-    ShowOneTrigger,
-    ShowOneContainer,
-    ShowOne,
-    SizerComponent
+    HeroChildComponent,
+    HeroParentComponent,
+    NameParentComponent,
+    NameChildComponent,
+    VersionChildComponent,
+    VersionParentComponent,
+    VoterComponent,
+    VoteTakerComponent,
+    CountdownTimerComponent,
+    CountdownParentComponent,
+    CountdownParentViewChildComponent,
+    MissionControlComponent,
+    AstronautComponent,
+    MessageReceiver,
+    MessageSender
   ],
   imports: [
-    BrowserModule,
-    FormsModule
+    BrowserModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

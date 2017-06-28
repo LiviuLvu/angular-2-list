@@ -1,52 +1,17 @@
-<color-picker #sample></color-picker>
-<input (keyup)="sample.color = input.value" #input placeholder="ex. magenta, fuchsia">
-<button (click)="reset(input, sample)">Reset</button>
-
-
-<h4>Hover color options</h4>
-<div>
-  <label>
-    <input type="radio" name="colors" (click)="color='lightgreen'">
-    Green
-  </label>
-  
-  <label>
-    <input type="radio" name="colors" (click)="color='yellow'">
-    Yellow
-  </label>
-  
-  <label>
-    <input type="radio" name="colors" (click)="color='cyan'">
-    Cyan
-  </label>
-</div>
-<p myHighlight [highlightColor]="color">Initial hover color not set</p>
-<p myHighlight [highlightColor]="color" defaultColor="violet">Default hover color</p>
-<p myHighlight [highlightColor]="color" defaultColor="orange">Default Orange Highlight</p>
-
-<app-sizer [(size)]="fontSizePx"></app-sizer>
-<div [style.font-size.px]="fontSizePx">Resizable Text</div>
-
-<!-- this area active="true" is not recognized -->
-<div class="tab-container" showOneContainer>
-  <ul class="tab-buttons">
-    <li showOneTrigger="sup" >Superman</li>
-    <li showOneTrigger="bat">Batman</li>
-    <li showOneTrigger="fla">Flash</li>
-  </ul>
-
-  <div class="tab-panel" showOne="sup" >
-    <div class="logo sup">Superman</div>
-  </div>
-
-  <div class="tab-panel" showOne="bat">
-    <div class="logo bat">Batman</div>
-  </div>
-
-  <div class="tab-panel" showOne="fla">
-    <div class="logo fla">Flash</div>
-  </div>
-</div>
-
-<h4>Structural Directives</h4>
-<p *ngIf="true">Hide or Show with *ngIf</p>
+<h1>Component Interaction Examples</h1>
+<hr>
+<hero-parent></hero-parent>
+<hr>
+<name-parent></name-parent>
+<hr>
+<version-parent></version-parent>
+<hr>
+<vote-taker></vote-taker>
+<hr>
+<countdown-parent-lv></countdown-parent-lv>
+<hr>
+<countdown-parent-vc></countdown-parent-vc>
+<hr>
+<mission-control></mission-control>
+<hr>
+<message-sender></message-sender>

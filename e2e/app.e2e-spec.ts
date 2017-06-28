@@ -1,14 +1,14 @@
-import { ComicsListPage } from './app.po';
+import { ComponentInteractionExamplesPage } from './app.po';
 
-describe('comics-list App', function() {
-  let page: ComicsListPage;
+describe('component-interaction-examples App', () => {
+  let page: ComponentInteractionExamplesPage;
 
   beforeEach(() => {
-    page = new ComicsListPage();
+    page = new ComponentInteractionExamplesPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });
