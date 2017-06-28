@@ -1,3 +1,7 @@
-.active {
-  background-color: red;
+.tab-container {
+  background-color: lightskyblue;
+}
+
+.tab-panel {
+  padding: 0 20px 20px 20px;
 }

@@ -1,12 +1,52 @@
- <h1>Angular Router</h1>
-  <nav>
-    <a routerLink="/home" routerLinkActive="active">Home</a>
-    <a routerLink="/directory" routerLinkActive="active">Directory</a>
-  </nav>
+<color-picker #sample></color-picker>
+<input (keyup)="sample.color = input.value" #input placeholder="ex. magenta, fuchsia">
+<button (click)="reset(input, sample)">Reset</button>
 
-  <router-outlet></router-outlet>
 
-  <!--<hero-list></hero-list>-->
-  <!--<hero-list-promise></hero-list-promise>-->
-  <!--<my-wiki></my-wiki>-->
-  <!--<my-wiki-smart></my-wiki-smart>-->
+<h4>Hover color options</h4>
+<div>
+  <label>
+    <input type="radio" name="colors" (click)="color='lightgreen'">
+    Green
+  </label>
+  
+  <label>
+    <input type="radio" name="colors" (click)="color='yellow'">
+    Yellow
+  </label>
+  
+  <label>
+    <input type="radio" name="colors" (click)="color='cyan'">
+    Cyan
+  </label>
+</div>
+<p myHighlight [highlightColor]="color">Initial hover color not set</p>
+<p myHighlight [highlightColor]="color" defaultColor="violet">Default hover color</p>
+<p myHighlight [highlightColor]="color" defaultColor="orange">Default Orange Highlight</p>
+
+<app-sizer [(size)]="fontSizePx"></app-sizer>
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>
+
+<!-- this area active="true" is not recognized -->
+<div class="tab-container" showOneContainer>
+  <ul class="tab-buttons">
+    <li showOneTrigger="sup" >Superman</li>
+    <li showOneTrigger="bat">Batman</li>
+    <li showOneTrigger="fla">Flash</li>
+  </ul>
+
+  <div class="tab-panel" showOne="sup" >
+    <div class="logo sup">Superman</div>
+  </div>
+
+  <div class="tab-panel" showOne="bat">
+    <div class="logo bat">Batman</div>
+  </div>
+
+  <div class="tab-panel" showOne="fla">
+    <div class="logo fla">Flash</div>
+  </div>
+</div>
+
+<h4>Structural Directives</h4>
+<p *ngIf="true">Hide or Show with *ngIf</p>

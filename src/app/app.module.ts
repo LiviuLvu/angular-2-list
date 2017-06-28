@@ -1,40 +1,33 @@
-import { RouterModule, Routes } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser'
 import { FormsModule } from '@angular/forms';
-import { HttpModule, JsonpModule } from '@angular/http';
+
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { DirectoryComponent } from './directory/directory.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'directory', component: DirectoryComponent },
-  { path: '', 
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  { path: '**', component: PageNotFoundComponent }
-];
+import { ColorPickerComponent } from './color-picker/color-picker.component';
+import { HighlightDirective } from './highlight.directive';
+import { SizerComponent } from './sizer/sizer.component';
+import { CollapseOnClick } from './collapse-on-click.directive';
+import { ShowOneTrigger } from './show-one-trigger';
+import { ShowOneContainer } from './show-one-container';
+import { ShowOne } from './show-one';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    JsonpModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true })
-  ],
   declarations: [
     AppComponent,
-    HomeComponent,
-    DirectoryComponent,
-    PageNotFoundComponent
+    ColorPickerComponent,
+    HighlightDirective,
+    CollapseOnClick,
+    ShowOneTrigger,
+    ShowOneContainer,
+    ShowOne,
+    SizerComponent
   ],
-  exports: [RouterModule],
-  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
-
